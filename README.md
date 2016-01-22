@@ -1,5 +1,9 @@
-underscore-query
+lodash-query
 ===================
+
+### Note
+
+I published this module so that we can deploy lodash 4 in production.
 
 [![Build Status](https://secure.travis-ci.org/davidgtonge/underscore-query.png)](http://travis-ci.org/davidgtonge/underscore-query)
 
@@ -76,7 +80,7 @@ The following are some basic examples:
 
 ```js
 _.query( MyCollection, {
-    featured:true, 
+    featured:true,
     likes: {$gt:10}
 });
 // Returns all models where the featured attribute is true and there are
@@ -96,7 +100,7 @@ _.query(MyCollection, {
   $or:{
     featured: true, // Featured attribute is true
     category:{$in:["code","programming","javascript"]}
-  } 
+  }
   //Category attribute is either "code", "programming", or "javascript"
 });
 
