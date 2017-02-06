@@ -176,6 +176,16 @@
             });
             return assert.equal(result.length, 2);
         });
+        it("$in operator with RegExp", function() {
+            var a, result;
+            a = create();
+            result = _.query(a, {
+                title: {
+                    $in: [new RegExp("hOme", 'i'), "About"] 
+                }
+            });
+            return assert.equal(result.length, 2);
+        });
         it("$in operator with wrong query value", function() {
             var a;
             a = create();
